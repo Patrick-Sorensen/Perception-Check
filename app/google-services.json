@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "448461281131",
+    "firebase_url": "https://perception-check.firebaseio.com",
+    "project_id": "perception-check",
+    "storage_bucket": "perception-check.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:448461281131:android:1638021575466c17809e2e",
+        "android_client_info": {
+          "package_name": "com.example.perceptioncheck"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "448461281131-eptarumbmap13l4c728oo8kpjg4pcod2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.perceptioncheck",
+            "certificate_hash": "6bb30b21e6ad3388f1503a874a924367ba39a83e"
+          }
+        },
+        {
+          "client_id": "448461281131-780snnik6enocqd4m30l1uouij1ovat8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5L6EMu3JAJymX1iqLgF24KqSBxBq_4Zg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "448461281131-780snnik6enocqd4m30l1uouij1ovat8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
