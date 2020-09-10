@@ -7,12 +7,20 @@ import android.util.Log
 import android.view.View
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var auth: FirebaseAuth
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        // Initialize Firebase Auth
+        auth = Firebase.auth
 
         register_button_register.setOnClickListener {
             performRegister()
@@ -47,10 +55,14 @@ class MainActivity : AppCompatActivity() {
         Log.d("MainActivity", "Password: $password")
 
         // Firebase Authentication to create a user with email and password
-        FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, password)
-            .addOnCompleteListener(this) {
-                if(it.isSuccessful) {
+        auth.createUserWithEmailAndPassword(email, password)
+            .addOnCompleteListener(this) {task ->
+                if(task.isSuccessful) {
                     Log.d("MainActivity", "Successfully created user")
+
+                    // Launch login activity
+                    val intent = Intent(this, ProfileActivity::class.java)
+                    startActivity(intent)
                 } else {
                     Log.d("MainActivity", "Failed to create a user")
                     return@addOnCompleteListener
